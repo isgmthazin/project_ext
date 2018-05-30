@@ -6,9 +6,45 @@
 		<field name="model">crm.lead</field>
 		<field name="arch" type="xml">
 			<field name="name" position="before">
-				<field name="code_number" placeholder="Code"/>
+				<field name="code_number" placeholder="Code" />
 			</field>
-			
+
+		</field>
+	</record>
+
+	<record id="ext_crm_case_form_view_oppor" model="ir.ui.view">
+		<field name="name">crm.ext.form</field>
+		<field name="inherit_id" ref="crm.crm_case_form_view_oppor"></field>
+		<field name="model">crm.lead</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="code_number" placeholder="Code" />
+			</field>
+
+		</field>
+	</record>
+	<!-- crm.lead kanban form customization -->
+	<record id="ext_crm_case_kanban_view_leads" model="ir.ui.view">
+		<field name="name">crm.ext.form</field>
+		<field name="inherit_id" ref="crm.crm_case_kanban_view_leads"></field>
+		<field name="model">crm.lead</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="code_number" placeholder="Code" />
+			</field>
+
+		</field>
+	</record>
+	<!-- crm.lead search form customization -->
+	<record id="ext_view_crm_case_opportunities_filter" model="ir.ui.view">
+		<field name="name">crm.lead.search.ext</field>
+		<field name="inherit_id" ref="	crm.view_crm_case_opportunities_filter"></field>
+		<field name="model">crm.lead</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="code_number" string="Code" />
+			</field>
+
 		</field>
 	</record>
 </odoo>
