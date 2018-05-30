@@ -1,2 +1,2 @@
-import project_project_ext
-import crm_ext
+from . import project_project_ext
+from . import crm_ext
