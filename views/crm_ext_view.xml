@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="ext_view_crm_form" model="ir.ui.view">
+		<field name="name">crm.ext.form</field>
+		<field name="inherit_id" ref="crm.view_create_opportunity_simplified"></field>
+		<field name="model">crm.lead</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="code_number" placeholder="Code"/>
+			</field>
+			
+		</field>
+	</record>
+</odoo>

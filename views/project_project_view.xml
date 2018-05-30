@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- project.project form customization -->
+	<record id="ext_view_project_form" model="ir.ui.view">
+		<field name="name">project.form</field>
+		<field name="inherit_id" ref="project.edit_project"></field>
+		<field name="model">project.project</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="code_number" placeholder="Project Code"/>
+			</field>
+			
+		</field>
+	</record>
+	
+	<!-- project.task form customization -->
+	<record id="ext_view_project_task_form" model="ir.ui.view">
+		<field name="name">project.task.form</field>
+		<field name="inherit_id" ref="project.view_task_form2"></field>
+		<field name="model">project.task</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="task_id" placeholder="Task ID..."/>
+			</field>
+			
+		</field>
+	</record>
+	
+	<!-- project.task search form customization -->
+	<record id="ext_view_project_task_search" model="ir.ui.view">
+		<field name="name">project.task.search.ext</field>
+		<field name="inherit_id" ref="project.view_task_search_form"></field>
+		<field name="model">project.task</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="task_id" string="Task ID"/>
+			</field>
+			
+		</field>
+	</record>
+	
+</odoo>
