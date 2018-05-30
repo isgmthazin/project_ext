@@ -36,15 +36,14 @@
 		</field>
 	</record>
 	<!-- crm.lead search form customization -->
-	<record id="ext_view_crm_case_opportunities_filter" model="ir.ui.view">
-		<field name="name">crm.lead.search.ext</field>
-		<field name="inherit_id" ref="	crm.view_crm_case_opportunities_filter"></field>
-		<field name="model">crm.lead</field>
-		<field name="arch" type="xml">
-			<field name="name" position="before">
-				<field name="code_number" string="Code" />
-			</field>
-
-		</field>
-	</record>
+	<record model="ir.ui.view" id="ext_crm_opportunity_partner_filter">
+            <field name="name">crm.opportunity.code.filter</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="code_number"/>
+                </field>
+            </field>
+        </record>
 </odoo>
