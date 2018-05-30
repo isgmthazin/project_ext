@@ -46,4 +46,16 @@
                 </field>
             </field>
         </record>
+        
+      <!-- crm.lead LIST view customization -->
+      <record id="ext_view_crm_lead_list" model="ir.ui.view">
+		<field name="name">project.crm.list.ext</field>
+		<field name="inherit_id" ref="crm.crm_case_tree_view_oppor"></field>
+		<field name="model">crm.lead</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="code_number" string="Code"/>
+			</field>
+		</field>
+	</record>
 </odoo>

@@ -25,6 +25,18 @@
 		</field>
 	</record>
 	
+	<record id="project_project_kanban_view_ext" model="ir.ui.view">
+		<field name="name">project.kanban.view.ext</field>
+		<field name="inherit_id" ref="project.view_project_kanban"></field>
+		<field name="model">project.project</field>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="code_number" />
+			</field>
+
+		</field>
+	</record>
+	
 	<!-- project.task FORM customization -->
 	<record id="ext_view_project_task_form" model="ir.ui.view">
 		<field name="name">project.task.form</field>
